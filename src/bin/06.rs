@@ -9,26 +9,26 @@ pub fn part_one(input: &str) -> Option<u32> {
     let input = input.chars().collect::<Vec<char>>();
     let mut index = 4;
     while index < input.len() {
-        let win = &input[index-4..index];
+        let win = &input[index - 4..index];
 
         if check_window(win, 4) {
-            return Some(index as u32)
+            return Some(index as u32);
         }
 
         index += 1;
     }
-    
-   unreachable!()
+
+    unreachable!()
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
     let input = input.chars().collect::<Vec<char>>();
     let mut index = 14;
     while index < input.len() {
-        let win = &input[index-14..index];
+        let win = &input[index - 14..index];
 
         if check_window(win, 14) {
-            return Some(index as u32)
+            return Some(index as u32);
         }
 
         index += 1;
